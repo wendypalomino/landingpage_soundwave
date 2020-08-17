@@ -1,0 +1,53 @@
+/* this part separates both divs of the section side by side*/
+
+.discover-main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+ }
+
+ .discover-main-section .covers-image {
+     width: 30vw; /* this sets the image that is not too smal or too big*/
+     margin-left: 2rem; /* this will help the image never touch to close the div next to it*/
+    height: auto; /* the pic will never look strech will be perfect*/
+    max-width: 350px; /* the pic doesnt become to big*/
+ }
+
+ .icon-section {
+     display: flex;
+ }
+
+ .icon {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     margin: .5rem;
+     padding: .75rem;
+     width: 100px;
+     height:100px;
+    background-color: #202027;
+    margin-bottom: 2rem;
+ }
+
+ .icon img {
+     width: 40px;
+ }
+
+ /* when the page gets smaller the image gets in the middle 
+ and in order to avoid that, we are going to put it down with a media query*/
+
+ @media (max-width: 800px){
+    .discover-main-section {
+         flex-direction: column;
+         justify-content: center;
+     }
+.discover-main-section .covers-image{
+    margin-top: 2rem;
+    height: 30vh;
+    width:auto;
+}
+
+
+ }
